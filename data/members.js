@@ -9,5 +9,6 @@ const MEMBERS = [
   { sid: "23456789", name: "Priya Sharma", joinDate: "2024-09-03" },
   { sid: "34567890", name: "Wei Chen", joinDate: "2025-01-15" },
   { sid: "45678901", name: "Fatima Al-Sayed", joinDate: "2025-01-20" },
-  { sid: "56789012", name: "Kanrawee Witoonchart", joinDate: "2025-02-10" },
+  { sid: "56789012", name: "robin hood", joinDate: "2025-02-10" },
+  { sid: "1155245661", name: "Kanrawee Witoonchart", joinDate: "2024-09-01" }
 ];
