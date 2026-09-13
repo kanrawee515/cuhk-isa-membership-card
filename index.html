@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISA Membership Card Lookup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>International Student Association</h1>
+    <p>Membership Card Lookup</p>
+  </header>
+
+  <main>
+    <section class="lookup-panel" id="lookupPanel">
+      <form id="lookupForm" autocomplete="off">
+        <label for="sidInput">Student ID</label>
+        <input type="text" id="sidInput" name="sid" placeholder="e.g. 12345678" required>
+
+        <label for="nameInput">Full Name</label>
+        <input type="text" id="nameInput" name="name" placeholder="e.g. Alex Johnson" required>
+
+        <button type="submit">Find My Card</button>
+      </form>
+      <p class="error-message" id="errorMessage" hidden></p>
+    </section>
+
+    <section class="card-panel" id="cardPanel" hidden>
+      <div class="scene">
+        <div class="card" id="card" tabindex="0" role="button" aria-label="Membership card, click or press Enter to flip">
+          <div class="card-face card-front">
+            <div class="card-top">
+              <span class="org-mark">ISA</span>
+              <span class="chip" aria-hidden="true"></span>
+            </div>
+            <div class="card-number" id="cardSid">0000 0000</div>
+            <div class="card-bottom">
+              <div class="card-name" id="cardName">FULL NAME</div>
+              <div class="card-tag">ISA EXCLUSIVE MEMBER</div>
+            </div>
+          </div>
+          <div class="card-face card-back">
+            <div class="magnetic-stripe"></div>
+            <div class="back-content">
+              <div class="qr-wrap" id="qrWrap"></div>
+              <div class="join-date">Member since <span id="cardJoinDate">-</span></div>
+            </div>
+            <div class="back-fineprint">This card is property of the International Student Association.</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button type="button" id="flipBtn">Flip Card</button>
+        <button type="button" id="backBtn">Search Again</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; International Student Association</p>
+  </footer>
+
+  <script src="lib/qrcode.js"></script>
+  <script src="data/members.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
