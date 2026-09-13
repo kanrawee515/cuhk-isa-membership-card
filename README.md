@@ -1,8 +1,8 @@
 # ISA Membership Card
 
 A lookup tool for the International Student Association. Members enter their
-Student ID and full name to see a flippable 3D membership card with their
-name, SID, a QR code, and join date.
+Student ID to see a flippable 3D membership card with their name, SID, a QR
+code, and join date.
 
 ## Running it
 

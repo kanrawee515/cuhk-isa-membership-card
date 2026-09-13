@@ -5,7 +5,6 @@ const state = {
 
 const lookupForm = document.getElementById("lookupForm");
 const sidInput = document.getElementById("sidInput");
-const nameInput = document.getElementById("nameInput");
 const submitBtn = lookupForm.querySelector("button[type=submit]");
 const statusMessage = document.getElementById("statusMessage");
 const errorMessage = document.getElementById("errorMessage");
@@ -115,16 +114,9 @@ const membersReady = (async () => {
   }
 })();
 
-function normalize(str) {
-  return str.trim().toLowerCase().replace(/\s+/g, " ");
-}
-
-function findMember(sid, name) {
+function findMember(sid) {
   const targetSid = sid.trim();
-  const targetName = normalize(name);
-  return state.members.find(
-    (m) => m.sid === targetSid && normalize(m.name) === targetName
-  );
+  return state.members.find((m) => m.sid === targetSid);
 }
 
 function formatDate(isoDate) {
@@ -170,7 +162,6 @@ function resetToSearch() {
   lookupPanel.hidden = false;
   errorMessage.hidden = true;
   sidInput.value = "";
-  nameInput.value = "";
   sidInput.focus();
 }
 
@@ -183,11 +174,11 @@ lookupForm.addEventListener("submit", async (e) => {
   errorMessage.hidden = true;
   await membersReady;
 
-  const member = findMember(sidInput.value, nameInput.value);
+  const member = findMember(sidInput.value);
   if (member) {
     showCard(member);
   } else {
-    showError("No matching member found. Double-check your Student ID and name.");
+    showError("No matching member found. Double-check your Student ID.");
   }
 });
 
