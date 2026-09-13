@@ -132,6 +132,18 @@ main {
   text-align: center;
 }
 
+.status-message {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.lookup-panel button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* --- Card --- */
 
 .card-panel {
