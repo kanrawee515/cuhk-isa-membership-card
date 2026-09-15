@@ -197,36 +197,38 @@ main {
 }
 
 .card-number {
+  position: absolute;
+  left: 7%;
+  top: 33%;
   font-size: 1.15rem;
   letter-spacing: 4px;
   font-family: "Courier New", monospace;
+  font-weight: 700;
+  color: var(--isa-navy);
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
 }
 
 .card-name {
+  position: absolute;
+  left: 7%;
+  top: 51%;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: 6px;
+  color: var(--isa-navy);
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
 }
 
 .card-tag {
-  font-size: 0.7rem;
-  letter-spacing: 1.5px;
-  color: var(--isa-gold);
-  font-weight: 600;
-  margin-top: 2px;
-}
-
-.card-overlay {
   position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  background: rgba(8, 11, 16, 0.68);
-  border-radius: 10px;
-  padding: 12px 16px;
-  backdrop-filter: blur(2px);
+  left: 7%;
+  top: 65%;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  color: #9b2fae;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
 }
 
 .card-back {
@@ -234,47 +236,41 @@ main {
   transform: rotateY(180deg);
 }
 
-.back-overlay {
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  background: rgba(8, 11, 16, 0.68);
-  border-radius: 10px;
-  padding: 14px 16px;
-  backdrop-filter: blur(2px);
-}
-
-.back-overlay-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
 .qr-wrap {
+  position: absolute;
+  left: 7%;
+  top: 25%;
   background: #fff;
   padding: 6px;
   border-radius: 6px;
   line-height: 0;
-  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .qr-wrap svg {
-  width: 76px;
-  height: 76px;
+  width: 72px;
+  height: 72px;
   display: block;
 }
 
 .join-date {
-  font-size: 0.85rem;
-  color: #dbe4ef;
+  position: absolute;
+  left: 7%;
+  top: 53%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--isa-navy);
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
 }
 
 .back-fineprint {
+  position: absolute;
+  left: 7%;
+  top: 68%;
+  width: 55%;
   font-size: 0.6rem;
-  color: #a9b6c4;
-  text-align: left;
-  margin-top: 10px;
+  color: #3d4a58;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
 }
 
 .card-actions {
