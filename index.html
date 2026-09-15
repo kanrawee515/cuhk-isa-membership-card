@@ -29,23 +29,20 @@
       <div class="scene">
         <div class="card" id="card" tabindex="0" role="button" aria-label="Membership card, click or press Enter to flip">
           <div class="card-face card-front">
-            <div class="card-top">
-              <span class="org-mark">ISA</span>
-              <span class="chip" aria-hidden="true"></span>
-            </div>
-            <div class="card-number" id="cardSid">0000 0000</div>
-            <div class="card-bottom">
+            <div class="card-overlay">
+              <div class="card-number" id="cardSid">0000 0000</div>
               <div class="card-name" id="cardName">FULL NAME</div>
               <div class="card-tag">ISA EXCLUSIVE MEMBER</div>
             </div>
           </div>
           <div class="card-face card-back">
-            <div class="magnetic-stripe"></div>
-            <div class="back-content">
-              <div class="qr-wrap" id="qrWrap"></div>
-              <div class="join-date">Member since <span id="cardJoinDate">-</span></div>
+            <div class="back-overlay">
+              <div class="back-overlay-row">
+                <div class="qr-wrap" id="qrWrap"></div>
+                <div class="join-date">Member since <span id="cardJoinDate">-</span></div>
+              </div>
+              <div class="back-fineprint">This card is property of the International Student Association.</div>
             </div>
-            <div class="back-fineprint">This card is property of the International Student Association.</div>
           </div>
         </div>
       </div>

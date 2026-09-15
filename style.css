@@ -157,7 +157,7 @@ main {
 .scene {
   width: 100%;
   max-width: 360px;
-  aspect-ratio: 1.586 / 1;
+  aspect-ratio: 1748 / 1240;
   perspective: 1200px;
 }
 
@@ -193,64 +193,13 @@ main {
 }
 
 .card-front {
-  background: linear-gradient(135deg, var(--isa-navy) 0%, var(--isa-blue) 55%, #2e5aa8 100%);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-front::after {
-  content: "";
-  position: absolute;
-  right: -40px;
-  top: -60px;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.25), transparent 70%);
-}
-
-.card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.org-mark {
-  font-weight: 800;
-  font-size: 1.3rem;
-  letter-spacing: 2px;
-  color: var(--isa-gold);
-}
-
-.chip {
-  width: 38px;
-  height: 28px;
-  border-radius: 5px;
-  background: linear-gradient(135deg, #e6c85a, #b8942f);
-  position: relative;
-}
-
-.chip::before {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
+  background: url("assets/card-front.png") center / cover no-repeat;
 }
 
 .card-number {
   font-size: 1.15rem;
   letter-spacing: 4px;
   font-family: "Courier New", monospace;
-  z-index: 1;
-}
-
-.card-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  z-index: 1;
 }
 
 .card-name {
@@ -258,6 +207,7 @@ main {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  margin-top: 6px;
 }
 
 .card-tag {
@@ -265,28 +215,40 @@ main {
   letter-spacing: 1.5px;
   color: var(--isa-gold);
   font-weight: 600;
+  margin-top: 2px;
+}
+
+.card-overlay {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  background: rgba(8, 11, 16, 0.68);
+  border-radius: 10px;
+  padding: 12px 16px;
+  backdrop-filter: blur(2px);
 }
 
 .card-back {
-  background: linear-gradient(135deg, #182530 0%, var(--isa-navy) 100%);
+  background: url("assets/card-back.png") center / cover no-repeat;
   transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
 }
 
-.magnetic-stripe {
-  width: 100%;
-  height: 18%;
-  background: #111;
-  margin-top: 14px;
+.back-overlay {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  background: rgba(8, 11, 16, 0.68);
+  border-radius: 10px;
+  padding: 14px 16px;
+  backdrop-filter: blur(2px);
 }
 
-.back-content {
-  flex: 1;
+.back-overlay-row {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px 20px;
 }
 
 .qr-wrap {
@@ -310,9 +272,9 @@ main {
 
 .back-fineprint {
   font-size: 0.6rem;
-  color: #8fa0b3;
-  text-align: center;
-  padding: 0 16px 10px;
+  color: #a9b6c4;
+  text-align: left;
+  margin-top: 10px;
 }
 
 .card-actions {
